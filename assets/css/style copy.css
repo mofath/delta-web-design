@@ -1,0 +1,1039 @@
+/*
+Theme Name : Delta
+Author: IKIDIV
+Author URI: http://ikidiv.com/
+*/
+
+/*=========================================
+======= Font ==============================
+===========================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/CenturyGothic-Bold.woff2") format("woff2"),
+    url("../fonts/CenturyGothic-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/CenturyGothic.woff2") format("woff2"),
+    url("../fonts/CenturyGothic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("../fonts/BebasNeue-Regular.woff2") format("woff2"),
+    url("../fonts/BebasNeue-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=
+*/
+
+* {
+  -webkit-transition: all 350ms;
+  -o-transition: all 350ms;
+  -moz-transition: all 350ms;
+  transition: all 350ms;
+}
+
+body {
+  font-family: "Bebas Neue", cursive !important;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.btn.focus,
+.btn:focus {
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+}
+
+.about img,
+.intro img,
+.consulting img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.main-color {
+  color: #9aca3c !important;
+}
+.s-color {
+  color: #31a9e0 !important;
+}
+.black-color {
+  color: #000000 !important;
+}
+.white-color {
+  color: #000000 !important;
+}
+
+/*//////////////////////////////////
+            Grid
+//////////////////////////////////*/
+
+.main-content {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 750px 1200px 800px;
+  grid-template-areas:
+    "intro intro"
+    "consulting about"
+    "news news";
+  grid-gap: 0px;
+  height: auto;
+}
+
+.intro {
+  grid-area: intro;
+  background-color: yellow;
+  background-color: transparent;
+}
+
+.about {
+  grid-area: about;
+  background-color: red;
+  background-color: transparent;
+}
+
+.consulting {
+  grid-area: consulting;
+  background-color: green;
+  background-color: transparent;
+}
+
+.news {
+  grid-area: news;
+  background-color: transparent;
+  z-index: 2000 !important;
+}
+
+/*//////////////////////////////////
+            Componants
+//////////////////////////////////*/
+
+/*--= Button =--*/
+.main-btn {
+  background-color: #000000;
+  font-size: 33px;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 0;
+}
+
+/*=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+               Header
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+*/
+header {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+}
+header .man-logo {
+  max-width: 200px;
+  height: 54px;
+}
+header .nav-btn {
+  background-color: black;
+  color: #9aca3c;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+}
+header .menu-content {
+  background-color: #000000;
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 2% 100%);
+  right: -16px;
+  position: relative;
+}
+header .main-menu {
+  margin-right: 35px;
+}
+header .main-menu li {
+  margin: 0 7px;
+}
+header .main-menu li a {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Century Gothic" !important;
+}
+header .main-menu li.active a,
+header .main-menu li a:hover {
+  color: #9aca3c;
+}
+header .search-form {
+  margin-right: 15px;
+}
+header .search-form input {
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  min-width: 200px;
+  height: 30px;
+}
+header .search-form button {
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+/*=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+               Footer
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+*/
+footer {
+  background-color: #000000;
+  padding: 20px;
+  bottom: 0;
+}
+footer .footer-logo {
+  margin-right: 5%;
+}
+footer .footer-menu {
+  margin-left: 15px;
+}
+footer .footer-menu li {
+  margin: 0 5px;
+}
+footer .footer-menu li a {
+  color: #fff;
+  font-size: 14px;
+  font-family: "Century Gothic" !important;
+}
+footer .footer-menu li.active a,
+footer .footer-menu li a:hover {
+  color: #9aca3c;
+}
+footer .footer-blk {
+  position: relative;
+  margin: 0 30px;
+}
+footer .footer-blk svg {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+footer .footer-blk span {
+  color: #fff;
+  font-size: 17px;
+  text-transform: lowercase;
+  font-family: "Century Gothic" !important;
+}
+
+/*=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+            HOME
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+*/
+
+/*====== +++ Intro +++ =====*/
+
+.intro {
+  position: relative;
+  height: 750px;
+  top: -15px;
+}
+.intro .intro-slider {
+  position: absolute;
+  max-height: 750px;
+  z-index: 99;
+  width: 100%;
+  left: -8%;
+}
+
+.intro .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.intro .intro-slider .item {
+  padding-right: 75px;
+}
+.intro .intro-slider .item svg {
+  fill: transparent !important;
+}
+.intro .intro-slider .item .slider-overlay {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  left: auto;
+}
+.intro .title {
+  font-size: 70px;
+  color: #000000;
+  font-family: "Century Gothic" !important;
+}
+.intro .title span {
+  font-size: 90px;
+  color: #000000;
+  font-family: "Century Gothic" !important;
+}
+.intro .text {
+  font-size: 24px;
+  color: #000000;
+  font-family: "Century Gothic" !important;
+}
+.intro .main-btn {
+  font-size: 22px;
+  float: right;
+}
+.intro .intro-bgs .gradiant-bg {
+  position: relative;
+  transform: rotate(3deg);
+  top: 150px;
+  left: -40%;
+}
+.intro .intro-bgs .big-line-img {
+  position: absolute;
+  top: 100%;
+  left: 3%;
+  z-index: 99;
+  width: 25%;
+}
+.intro .intro-bgs .small-line-img {
+  position: absolute;
+  top: 94%;
+  left: 32%;
+  z-index: 99;
+  width: 4%;
+}
+.intro .intro-bgs .head-img-4 {
+  z-index: 9;
+  position: absolute;
+  left: -5%;
+  top: 65%;
+}
+
+/*====== +++ About +++ =====*/
+.about {
+  position: relative;
+  overflow: hidden;
+  z-index: 99;
+}
+.about .about-text {
+  padding-top: 100px;
+}
+.about .about-text .title {
+  font-size: 100px;
+  color: #000000;
+  font-weight: 400;
+  z-index: 1000 !important;
+}
+.about .about-text .title a {
+  color: #000000;
+}
+
+.about .about-text p {
+  font-size: 16px;
+  color: #000000;
+  font-family: "Century Gothic" !important;
+}
+
+.about .bin-bg {
+  position: absolute;
+  right: -15%;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+.about .square-bg {
+  position: absolute;
+  right: -60%;
+  top: 0%;
+  width: 200%;
+  height: auto;
+  z-index: -1;
+}
+
+/*====== +++ Consulting +++ =====*/
+.consulting {
+  width: 100%;
+}
+.consulting .tlt-line {
+  position: relative;
+  top: 35% !important;
+  left: 5%;
+  transform: rotate(-28deg);
+  font-size: 80px;
+  color: red;
+  z-index: 9;
+}
+
+.consulting .lines-bg {
+  position: absolute;
+  top: 220%;
+  left: -20%;
+}
+.consulting .tlt-line a {
+  color: #000000;
+}
+.consulting .tlt-line::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transition: all 1000ms;
+  z-index: 100000 !important;
+}
+.consulting .tlt-line.anime::after {
+  width: 200px;
+}
+
+.consulting .animated-links {
+  position: relative;
+  top: 35% !important;
+  left: 25%;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+.consulting .animated-links .link {
+  line-height: 1;
+  position: absolute;
+  font-family: "Century Gothic" !important;
+}
+.consulting .animated-links .link:hover {
+  position: absolute;
+  transform: scale(1.5);
+  opacity: 1;
+}
+.consulting .animated-links.opacity .link {
+  opacity: 0.4;
+}
+
+.consulting .animated-links .hosp-link {
+  transform: rotate(90deg);
+  font-size: 68px;
+  top: 110px;
+  left: 350px;
+}
+.consulting .animated-links .uni-link {
+  transform: rotate(90deg);
+  font-size: 30px;
+  top: 185px;
+  left: 277px;
+}
+.consulting .animated-links .indus-link {
+  transform: rotate(90deg);
+  font-size: 45px;
+  top: 450px;
+  left: 185px;
+}
+.consulting .animated-links .rest-link {
+  font-size: 30px;
+  top: 350px;
+  left: 60px;
+}
+.consulting .animated-links .sport-link {
+  font-size: 50px;
+  text-align: right;
+  top: 380px;
+  left: 0;
+}
+.consulting .animated-links .resd-link {
+  font-size: 38px;
+  top: 355px;
+  left: 410px;
+}
+.consulting .animated-links .gov-link {
+  font-size: 25px;
+  top: 435px;
+  left: 410px;
+}
+.consulting .animated-links .trans-llink {
+  transform: rotate(90deg);
+  font-size: 45px;
+  top: 590px;
+  left: 170px;
+}
+
+/*====== +++ News +++ =====*/
+.news {
+  position: relative;
+  overflow: hidden;
+}
+.news .title {
+  font-size: 120px;
+  color: #ffffff;
+  position: relative;
+  right: -75%;
+  top: 0%;
+  z-index: 1000;
+}
+.news .news-slider {
+  position: absolute;
+  max-height: 750px;
+  z-index: 99;
+  width: 100%;
+  right: -10%;
+  bottom: 0 !important;
+}
+.news .news-bgs {
+  width: 100%;
+  height: 100%;
+}
+.news .news-bgs .news-gradient {
+  position: relative;
+  top: -30%;
+  right: -21%;
+  max-width: 160%;
+  max-height: 160%;
+}
+.news .news-slider:before {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 60%;
+  left: 12%;
+  transform: rotate(-33deg);
+}
+.news .news-slider:after {
+  content: "";
+  width: 300px;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  top: 43%;
+  left: 15%;
+  transform: rotate(-33deg);
+}
+.news .news-slider .owl-nav {
+  position: absolute;
+  top: 65%;
+  width: 50%;
+  right: 18%;
+}
+.news .news-slider .owl-nav button:focus {
+  border: none !important;
+}
+.news .news-slider .owl-nav button img {
+  height: 35px;
+}
+.news .news-slider .owl-nav button.owl-prev {
+  left: -50px;
+  position: absolute;
+  width: 30px;
+}
+.news .news-slider .owl-nav button.owl-next {
+  right: -50px;
+  position: absolute;
+  width: 30px;
+}
+.news .news-slider .owl-dots {
+  display: none;
+}
+
+.news .news-slider .item .overlay::before {
+  display: none;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -56px;
+  width: 65px;
+  height: 145px;
+  background-color: #fff;
+  transform: rotate(57deg);
+}
+.news .news-slider .item {
+  position: relative;
+}
+.news .news-slider .item .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 32%;
+  top: 64%;
+}
+.news .news-slider .item .overlay p {
+  color: #fff;
+  font-size: 16px;
+  font-family: "Century Gothic" !important;
+  font-weight: 400;
+}
+.news .news-slider .item .overlay .main-btn {
+  height: 40px;
+  line-height: 26px;
+  font-size: 18px;
+  margin-left: 25px;
+  letter-spacing: 1px;
+}
+
+.news .news-bgs .news-loops {
+  position: absolute;
+  right: 8%;
+  top: -40%;
+  z-index: 999;
+  width: 500px;
+}
+/*=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
+            Responsive
+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+*/
+
+/*========= 1920px ==========*/
+@media only screen and (max-width: 1920px) {
+  .consulting .tlt-line {
+    top: 25%;
+    left: 5%;
+  }
+  .consulting .animated-links {
+    top: 20%;
+    left: 10%;
+  }
+
+  .news .title {
+    right: -75%;
+    top: 15%;
+    font-size: 100px;
+  }
+  .news .news-bgs .news-gradient {
+    top: -15%;
+    right: -10%;
+  }
+
+  .news .news-slider .item .overlay p {
+    font-size: 13px;
+  }
+
+  .news .news-bgs .news-loops {
+    right: 5%;
+    top: -25%;
+  }
+}
+
+/*========= 1445px ==========*/
+@media only screen and (max-width: 1445px) {
+  /*=== header ===*/
+  .main-logo img {
+    max-width: 140px;
+    height: 40px;
+  }
+  header .main-menu li {
+    margin: 0 0;
+  }
+  header .search-form input {
+    min-width: 150px;
+  }
+  header .menu-content {
+    right: -20px;
+    padding: 0 15px;
+    height: 40px;
+  }
+  header .main-menu {
+    margin-right: 20px;
+  }
+
+  /*=== Footer ===*/
+  footer .footer-logo {
+    margin-right: 0%;
+    width: 100px;
+  }
+  footer .footer-menu li a {
+    font-size: 12px;
+  }
+  footer .footer-blk {
+    position: relative;
+    margin: 0 9px;
+  }
+
+  footer .navbar-collapse {
+    padding-left: 10%;
+  }
+
+  .main-btn {
+    font-size: 18px;
+    padding: 6px 9px;
+  }
+
+  .intro .title {
+    font-size: 50px;
+  }
+  .intro .title span {
+    font-size: 70px;
+  }
+  .intro .text {
+    font-size: 18px;
+  }
+  .intro .intro-bgs .gradiant-bg {
+    top: 50px;
+    left: -40%;
+  }
+  .intro .intro-bgs .head-img-4 {
+    left: -5%;
+    top: 65%;
+  }
+  .news .news-bgs .news-loops {
+    right: -7%;
+    top: -30%;
+  }
+  .news .title {
+    right: -80%;
+  }
+}
+
+/*========= 1370px ==========*/
+@media only screen and (max-width: 1370px) {
+  header .main-menu li a {
+    font-size: 15px;
+  }
+
+  footer .footer-menu {
+    margin-left: 10px;
+  }
+  /*=== Footer ===*/
+  footer .footer-logo {
+    width: 90px;
+  }
+  footer .footer-menu li a {
+    font-size: 12px;
+  }
+  footer .footer-blk {
+    position: relative;
+    margin: 0 7px;
+  }
+
+  footer .footer-logo img {
+    margin-right: 30px;
+  }
+
+  .intro .intro-bgs .big-line-img {
+    top: 85%;
+  }
+  .intro .intro-bgs .small-line-img {
+    top: 80%;
+  }
+}
+
+/*========= 1200px ==========*/
+@media only screen and (max-width: 1201px) {
+  header .main-menu li a {
+    font-size: 14px;
+  }
+  header .search-form input {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    max-width: 150px;
+  }
+
+  .intro .intro-slider {
+    width: 110%;
+  }
+  .intro .intro-slider .item .slider-overlay {
+    top: 20%;
+    right: 25%;
+    left: auto;
+  }
+  .intro .title {
+    font-size: 65px;
+  }
+  .intro .title span {
+    font-size: 70px;
+  }
+  .intro .text {
+    font-size: 18px;
+  }
+  .intro .main-btn {
+    font-size: 22px;
+    float: right;
+  }
+  .intro .intro-bgs .big-line-img {
+    top: 85%;
+  }
+  .intro .intro-bgs .small-line-img {
+    top: 80%;
+  }
+  .about .title {
+    font-size: 60px !important;
+  }
+  .consulting .tlt-line {
+    top: 0%;
+  }
+  .consulting .animated-links {
+    top: 20px;
+  }
+  .consulting .animated-links .gov-link {
+    top: 480px;
+  }
+}
+
+/*========= 1024px ==========*/
+
+@media only screen and (max-width: 1024px) {
+  header .main-menu li a {
+    font-size: 14px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  /*=== Footer ===*/
+  footer .footer-menu {
+    display: none;
+  }
+  footer .navbar-collapse {
+    justify-content: flex-end;
+  }
+  .main-content {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 750px 700px 900px 600px;
+    grid-template-areas:
+      "intro intro"
+      "about about"
+      "consulting consulting"
+      "news news";
+    height: auto;
+  }
+  .intro .intro-slider .item .slider-overlay {
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro .title,
+  .intro .text {
+    width: 100%;
+    font-weight: 500;
+    background-color: rgba(0, 0, 0, 0.2); /* Black background with opacity */
+  }
+  .intro .intro-bgs .big-line-img {
+    top: 75%;
+  }
+  .intro .intro-bgs .small-line-img {
+    top: 70%;
+  }
+  .about {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about .bin-bg {
+    right: 25%;
+    width: 50%;
+    height: auto;
+  }
+  .about .square-bg {
+    display: none;
+  }
+  .about .about-text {
+    position: relative;
+    width: 35%;
+    right: -32% !important;
+    text-align: center;
+    color: yellow;
+  }
+  .about .about-text .title {
+    font-size: 50px;
+    padding-top: 25%;
+  }
+  .about .about-text p {
+    font-size: 36px;
+  }
+
+  .about .about-text p {
+    font-size: 16px;
+    color: #000000;
+    font-family: "Century Gothic" !important;
+  }
+
+  .consulting {
+    position: relative;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .consulting .tlt-line {
+    width: 100%;
+    top: 10%;
+    left: 0;
+    right: 0;
+    transform: rotate(0deg);
+    text-align: center;
+  }
+
+  .consulting .animated-links {
+    position: absolute;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 20%;
+    left: 2%;
+  }
+}
+
+/*========= 990px ==========*/
+@media only screen and (max-width: 990px) {
+  /*=== header ===*/
+  header .menu-content {
+    right: 0px;
+    padding-left: 15px;
+    text-align: center;
+  }
+  header .search-form {
+    margin-right: 15px;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .intro .intro-bgs .big-line-img {
+    top: 65%;
+  }
+  .intro .intro-bgs .small-line-img {
+    top: 62%;
+  }
+}
+
+/*========= 768px ==========*/
+@media only screen and (max-width: 770px) {
+  /*=== header ===*/
+  .main-content {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 550px 700px 900px 600px;
+    grid-template-areas:
+      "intro intro"
+      "about about"
+      "consulting consulting"
+      "news news";
+    height: auto;
+  }
+
+  /*=== Footer ===*/
+  footer .navbar-collapse {
+    justify-content: flex-end;
+    display: flex !important;
+    flex: 1;
+  }
+
+  /*=== Home ===*/
+  .intro {
+    position: relative;
+    height: 580px;
+    top: -15px;
+  }
+  .intro .intro-bgs .big-line-img,
+  .intro .intro-bgs .head-img-4,
+  .intro .intro-bgs .small-line-img {
+    display: none;
+  }
+
+  .about {
+    background-color: yellow;
+  }
+}
+
+/*========= 580px ==========*/
+@media only screen and (max-width: 580px) {
+  .main-content {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 300px 700px 900px 600px;
+    grid-template-areas:
+      "intro intro"
+      "about about"
+      "consulting consulting"
+      "news news";
+    height: auto;
+  }
+
+  .intro .intro-bgs .gradiant-bg {
+    display: none;
+  }
+}
+
+/*========= 480px ==========*/
+@media only screen and (max-width: 480px) {
+  /*=== Footer ===*/
+  footer .footer-logo {
+    margin-right: auto;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  footer .navbar-collapse {
+    display: block !important;
+  }
+  footer .footer-blk {
+    position: relative;
+    margin: 0 10px;
+  }
+
+  /*=== Home ===*/
+  .intro {
+    position: relative;
+    height: 350px;
+    top: -15px;
+  }
+  .intro .intro-slider .item .slider-overlay {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    left: 36%;
+    line-height: 1;
+  }
+  .intro .title {
+    font-size: 24px;
+    color: #000000;
+  }
+  .intro .title span {
+    font-size: 30px;
+    color: #000000;
+  }
+  .intro .text {
+    font-size: 14px;
+    color: #000000;
+  }
+  .intro .main-btn {
+    font-size: 18px;
+    float: right;
+    margin-top: -10px;
+    height: 40px;
+    line-height: 1;
+  }
+}
+
+/*========= 380px ==========*/
+@media only screen and (max-width: 380px) {
+}
+
+@media only screen and (max-width: 340px) {
+}
