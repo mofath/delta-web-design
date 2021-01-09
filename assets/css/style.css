@@ -703,14 +703,14 @@ footer .footer-blk span {
     top: 25%;
     right: 12%;
   }
-  .consulting .tlt-line{
-    top: 15%!important;
+  .consulting .tlt-line {
+    top: 15% !important;
   }
-  .consulting .tlt-line::after{
-    left: 40%!important;
+  .consulting .tlt-line::after {
+    left: 40% !important;
   }
-  .consulting .animated-links{
-    top: 15%!important;
+  .consulting .animated-links {
+    top: 15% !important;
   }
 }
 
@@ -754,14 +754,14 @@ footer .footer-blk span {
     top: 25%;
     right: 12%;
   }
-  .consulting .tlt-line{
-    top: 10%!important;
+  .consulting .tlt-line {
+    top: 10% !important;
   }
-  .consulting .tlt-line::after{
-    left: 40%!important;
+  .consulting .tlt-line::after {
+    left: 40% !important;
   }
-  .consulting .animated-links{
-    top: 10%!important;
+  .consulting .animated-links {
+    top: 10% !important;
   }
 }
 
@@ -857,7 +857,6 @@ footer .footer-blk span {
       "news news";
     height: auto;
   }
-
   .intro .intro-slider .item .slider-overlay {
     left: 25%;
     display: flex;
@@ -866,7 +865,6 @@ footer .footer-blk span {
     align-items: center;
     text-align: center;
   }
-
   .intro .title,
   .intro .text {
     width: 100%;
@@ -897,7 +895,6 @@ footer .footer-blk span {
     width: 35%;
     right: -32% !important;
     text-align: center;
-    color: yellow;
   }
   .about .about-text .title {
     font-size: 50px;
@@ -906,85 +903,83 @@ footer .footer-blk span {
   .about .about-text p {
     font-size: 36px;
   }
-
   .about .about-text p {
     font-size: 16px;
     color: #000000;
     font-family: "Century Gothic" !important;
   }
-
   .consulting {
     position: relative;
-    top: 0;
     overflow: hidden;
-  }
-
-  .consulting .tlt-line {
-    width: 100%;
-    top: 20% !important;
-    left: 0;
-    right: 0;
-    transform: rotate(0deg);
-    text-align: center;
-  }
-
-  .consulting .tlt-line::after {
-    display: none;
-  }
-
-  .consulting .animated-links {
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    top: 20%;
-    left: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .consulting .tlt-line {
+    transform: rotate(0deg);
+    text-align: center;
+    left: 0;
+    flex: 1;
+  }
+  .consulting .tlt-line::after {
+    display: none;
+  }
+  .consulting .animated-links {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    width: 500px;
   }
   .consulting .animated-links .trans-llink {
-    top: 100px;
+    position: relative;
     font-size: 30px;
     text-align: left;
-    left: 180px;
+    top: -140px;
+    left: -210px;
   }
   .consulting .animated-links .indus-link {
-    top: 150px;
-    left: 200px;
+    top: 120px;
+    left: -40px;
     font-size: 30px;
   }
   .consulting .animated-links .hosp-link {
-    font-size: 32px;
-    top: 80px;
-    left: 310px;
-  }
-  .consulting .animated-links .resd-link {
-    top: 150px;
-    text-align: left;
-    transform: rotate(90deg);
-    left: 300px;
-  }
-
-  .consulting .animated-links .sport-link {
-    top: 100px;
     font-size: 35px;
-    left: 420px;
-    transform: rotate(90deg);
-    text-align: left;
-  }
-  .consulting .animated-links .rest-link {
-    top: 140px;
-    transform: rotate(90deg);
-    left: 450px;
+    top: 60px;
+    left: 70px;
   }
   .consulting .animated-links .uni-link {
-    top: 150px;
+    top: 140px;
     transform: rotate(90deg);
-    left: 490px;
+    left: 70px;
   }
   .consulting .animated-links .gov-link {
-    top: 150px;
     transform: rotate(90deg);
-    left: 520px;
+    top: 160px;
+    left: 85px;
+  }
+  .consulting .animated-links .rest-link {
+    transform: rotate(90deg);
+    top: 130px;
+    left: 145px;
+  }
+  .consulting .animated-links .sport-link {
+    top: 80px;
+    font-size: 30px;
+    left: 240px;
+    transform: rotate(90deg);
+    text-align: left;
+  }
+  .consulting .animated-links .resd-link {
+    transform: rotate(90deg);
+    text-align: left;
+    top: -20px;
+    right:20px;
   }
   .news .title {
     font-size: 50px;
@@ -1023,6 +1018,8 @@ footer .footer-blk span {
   }
   .intro .intro-bgs .small-line-img {
     top: 62%;
+  }
+  .consulting .animated-links {
   }
 }
 
@@ -1086,6 +1083,12 @@ footer .footer-blk span {
     width: 80%;
     right: 10%;
   }
+  .consulting{
+    height: 600px;
+  }
+  .consulting .animated-links .trans-llink{
+    top: -140px;
+  }
 }
 
 /*========= 580px ==========*/
@@ -1100,11 +1103,9 @@ footer .footer-blk span {
       "news news";
     height: auto;
   }
-
   .intro .intro-bgs .gradiant-bg {
     display: none;
   }
-
   .intro .title span,
   .intro .title {
     margin-top: 30px;
@@ -1131,6 +1132,64 @@ footer .footer-blk span {
   .about .bin-bg {
     width: 80%;
     right: 10%;
+  }
+  .consulting {
+    height: 400px;
+  }
+  .consulting .tlt-line {
+    flex: 1;
+    font-size: 40px;
+  }
+  .consulting .animated-links {
+    flex: 14;
+    width: 310px;
+  }
+  .consulting .animated-links .trans-llink {
+    font-size: 15px;
+    top: -120px;
+    left: -130px;
+  }
+  .consulting .animated-links .indus-link {
+    top: 80px;
+    left: -35px;
+    font-size: 20px;
+  }
+  .consulting .animated-links .hosp-link {
+    font-size: 23px;
+    top: 35px;
+    left: 35px;
+  }
+  .consulting .animated-links .uni-link {
+    top: 80px;
+    transform: rotate(90deg);
+    font-size: 18px;
+    left: 40px;
+  }
+  .consulting .animated-links .gov-link {
+    transform: rotate(90deg);
+    top: 120px;
+    left: 20px;
+    font-size: 20px;
+  }
+  .consulting .animated-links .rest-link {
+    transform: rotate(90deg);
+    top: 85px;
+    left: 90px;
+    font-size: 25px;
+  }
+  .consulting .animated-links .sport-link {
+    top: 40px;
+    font-size: 15px;
+    left: 190px;
+    transform: rotate(90deg);
+    text-align: left;
+  }
+  .consulting .animated-links .resd-link {
+    transform: rotate(90deg);
+    font-size: 15px;
+    text-align: left;
+    top:-10px;
+    left:270px;
   }
 }
 
