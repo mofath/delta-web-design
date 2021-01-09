@@ -716,9 +716,7 @@ footer .footer-blk span {
     margin-left: 10px;
   }
   /*=== Footer ===*/
-  .news-bgs{
-    background-color: yellow;
-  }
+
   footer .footer-logo {
     width: 90px;
   }
@@ -1006,7 +1004,7 @@ footer .footer-blk span {
   }
 
   .about {
-    background-color: yellow;
+
   }
 }
 
